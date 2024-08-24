@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Image Resizer</title>
+
+    <link rel="stylesheet" href="1.css">
+    <link rel="icon" type="image/png" href="resize.png">
+</head>
+
+<body>
+    <div>
+        <header>
+            <a href=""><img id="logo" src="resize.png"></a>
+            <a href="">
+                <h1>Image Resizer</h1>
+            </a>
+        </header>
+    </div>
+    <br><br><br>
+
+    <div id="contentContainer">
+        <div id="inputBox">
+            <input type="file" id="fileInput" accept="image/*">
+            <div id="previewContainer" style="display:none;">
+                <img id="previewImage" src="#" alt="Preview">
+                <br>
+                <div id="imageDimensions"></div>
+            </div>
+            <br><br><br><br><br><br><br>
+        </div>
+
+        <div id="contentInside">
+            <div id="resizeDimensions2" style="display:none; align-self: center;">
+
+                <!--RESIZE BY: DIMENSIONS/PERCENTAGE-->
+                <label id="resizeTypeLabel" for="resizeType"
+                    style="display:none; font-family:'Arial Rounded MT Bold'; font-size: 40px;">Resize By: </label>
+                <select id="resizeType" style="display:none;">
+                    <option value="dimensions">Dimensions</option>
+                    <option value="percentage">Percentage</option>
+                </select>
+
+            </div>
+            <br><br>
+
+            <div id="resizeDimensions" style="display:none; align-self: center;">
+
+                <!--WIDTH (VALUE) HEIGHT (VALUE)-->
+                <label for="widthInput" style="font-family:'Arial Rounded MT Bold'; font-size: 40px;">Width:</label>
+                <input type="number" id="widthInput" min="1">
+                <label for="heightInput"
+                    style="font-family:'Arial Rounded MT Bold'; font-size: 40px; padding-left: 30px;">Height:</label>
+                <input type="number" id="heightInput" min="1">
+            </div>
+            <br><br>
+
+            <div id="resizePercentage" style="display:none; align-self: center;">
+
+                <!--PERCENTAGE (VALUE)-->
+                <label for="percentageInput"
+                    style="font-family:'Arial Rounded MT Bold'; font-size: 40px;">Percentage:</label>
+                <input type="number" id="percentageInput" min="1" max="100" value="100">
+            </div>
+            <br><br>
+
+            <div style="display: flex; flex-direction: row; align-self: center;">
+                <!--(CHECKBOX) LOCK ASPECT RATIO-->
+                <input type="checkbox" id="aspectRatioCheckbox" style="display:none;">
+                <label id="aspectRatioLabel" for="aspectRatioCheckbox"
+                    style="display:none;font-family:'Arial Rounded MT Bold'; font-size: 40px; padding-left: 10px;">Lock
+                    Aspect Ratio</label>
+            </div>
+            <br><br>
+
+            <!--RESIZE IMAGE BUTTON-->
+            <button id="resizeButton" style="display:none; align-self: center;">Download Image</button>
+        </div>
+    </div>
+
+    <footer>
+        <p id="footerText">Developed by aNjo</p>
+    </footer>
+
+    <script src="1.js"></script>
+</body>
+
+</html>
